@@ -1,4 +1,3 @@
-import React from "react"
 import Image from "next/image"
 
 const skills = [
@@ -37,8 +36,8 @@ const AboutSection = () => {
             <br />
             <p>
               I graduated from University of Massachusetts, Lowell in 2018 with
-              a BS in Information Technology and have worked in the field for
-              years prior to graduating.
+              a BS in Information Technology and have worked a number of years
+              in the field prior to graduating.
             </p>
             <br />
             <p>

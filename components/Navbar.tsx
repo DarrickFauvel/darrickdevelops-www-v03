@@ -37,7 +37,15 @@ const Navbar = () => {
         <div>
           <div className="flex items-center justify-between py-3">
             <div className="md:py-5 md:block">
-              <h2 className="text-2xl font-bold">Darrick Develops</h2>
+              <Link
+                className="cursor-pointer"
+                to="home"
+                spy={true}
+                smooth={true}
+                offset={-100}
+                duration={500}>
+                <h2 className="text-2xl font-bold">Darrick Develops</h2>
+              </Link>
             </div>
             <div className="md:hidden">
               <button onClick={() => setNavbar(!navbar)}>

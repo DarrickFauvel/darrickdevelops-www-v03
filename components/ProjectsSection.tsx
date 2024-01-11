@@ -2,7 +2,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import SlideUp from "./SlideUp"
-import { Icon } from "@iconify/react"
+import Icon from "./Icon"
 
 const projects = [
   {
@@ -63,20 +63,10 @@ const ProjectsSection = () => {
                     </p>
                     <div className="flex flex-row align-bottom space-x-4">
                       <Link href={project.github} target="_blank">
-                        <Icon
-                          className="hover:-translate-y-1 transition-transform cursor-pointer"
-                          icon="bi:github"
-                          width="30"
-                          height="30"
-                        />
+                        <Icon icon="github" />
                       </Link>
                       <Link href={project.link} target="_blank">
-                        <Icon
-                          className="hover:-translate-y-1 transition-transform cursor-pointer"
-                          icon="bi:box-arrow-up-right"
-                          width="30"
-                          height="30"
-                        />
+                        <Icon icon="box-arrow" />
                       </Link>
                     </div>
                   </div>

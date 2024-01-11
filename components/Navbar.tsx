@@ -1,10 +1,7 @@
 "use client"
-import { useState } from "react"
-import { Link } from "react-scroll/modules"
+import { useEffect, useState } from "react"
 import { useTheme } from "next-themes"
-import { RiMoonFill, RiSunLine } from "react-icons/ri"
-import { IoMdMenu, IoMdClose } from "react-icons/io"
-import { blob } from "stream/consumers"
+import { Icon } from "@iconify/react"
 
 interface NavItem {
   label: string
@@ -27,9 +24,18 @@ const NAV_ITEMS: Array<NavItem> = [
 ]
 
 const Navbar = () => {
+  const [navbar, setNavbar] = useState(false)
+  const [mounted, setMounted] = useState(false)
   const { systemTheme, theme, setTheme } = useTheme()
   const currentTheme = theme === "systems" ? systemTheme : theme
-  const [navbar, setNavbar] = useState(false)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  if (!mounted) {
+    return null
+  }
 
   return (
     <header className="w-full mx-auto px-4 bg-white shadow fixed top-0 z-50 sm:px-20 dark:bg-stone-900 dark:border-b dark:border-stone-600">
@@ -37,19 +43,17 @@ const Navbar = () => {
         <div>
           <div className="flex items-center justify-between py-3">
             <div className="md:py-5 md:block">
-              <Link
-                className="cursor-pointer"
-                to="home"
-                spy={true}
-                smooth={true}
-                offset={-100}
-                duration={500}>
+              <a className="cursor-pointer" href="#home">
                 <h2 className="text-2xl font-bold">Darrick Develops</h2>
-              </Link>
+              </a>
             </div>
             <div className="md:hidden">
               <button onClick={() => setNavbar(!navbar)}>
-                {navbar ? <IoMdClose size={30} /> : <IoMdMenu size={30} />}
+                {navbar ? (
+                  <Icon icon="ri:close-line" width="30" height="30" />
+                ) : (
+                  <Icon icon="ri:menu-fill" width="30" height="30" />
+                )}
               </button>
             </div>
           </div>
@@ -63,31 +67,31 @@ const Navbar = () => {
             <div className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
               {NAV_ITEMS.map((item, idx) => {
                 return (
-                  <Link
+                  <a
                     key={idx}
-                    to={item.page}
+                    href={`#${item.page}`}
                     className="cursor-pointer block lg:inline-block text-neutral-900 hover:text-neutral-500 dark:text-neutral-100"
-                    activeClass="active"
-                    spy={true}
-                    smooth={true}
-                    offset={-100}
-                    duration={500}
                     onClick={() => setNavbar(!navbar)}>
                     {item.label}
-                  </Link>
+                  </a>
                 )
               })}
               {currentTheme === "dark" ? (
                 <button
                   className="bg-slate-100 p-2 rounded-xl"
                   onClick={() => setTheme("light")}>
-                  <RiSunLine size={25} color="black" />
+                  <Icon
+                    className="dark:text-black"
+                    icon="ri:sun-line"
+                    width={25}
+                    height={25}
+                  />
                 </button>
               ) : (
                 <button
                   className="bg-slate-100 p-2 rounded-xl"
                   onClick={() => setTheme("dark")}>
-                  <RiMoonFill size={25} />
+                  <Icon icon="ri:moon-fill" width={25} height={25} />
                 </button>
               )}
             </div>

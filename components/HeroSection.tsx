@@ -1,6 +1,5 @@
 "use client"
 import Image from "next/image"
-import { Link } from "react-scroll/modules"
 // import { HiArrowDown } from "react-icons/hi"
 
 const HeroSection = () => {
@@ -28,30 +27,18 @@ const HeroSection = () => {
             based in Lowell, MA. Working towards creating software that makes
             life easier and more meaningful.
           </p>
-          <Link
-            to="projects"
-            className="text-neutral-100 font-semibold px-6 py-3 bg-teal-600 rounded shadow hover:bg-teal-700"
-            activeClass="active"
-            spy={true}
-            smooth={true}
-            offset={-100}
-            duration={500}>
+          <a
+            href="#projects"
+            className="text-neutral-100 font-semibold px-6 py-3 bg-teal-600 rounded shadow hover:bg-teal-700">
             Projects
-          </Link>
+          </a>
         </div>
       </div>
 
       <div>
-        <Link
-          className="flex flex-row justify-center"
-          to="about"
-          activeClass="active"
-          spy={true}
-          smooth={true}
-          offset={-100}
-          duration={500}>
+        <a className="flex flex-row justify-center" href="#about">
           {/* <HiArrowDown className="animate-bounce" size={30} /> */}
-        </Link>
+        </a>
       </div>
     </section>
   )

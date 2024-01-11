@@ -1,7 +1,8 @@
+"use client"
 import Image from "next/image"
 import Link from "next/link"
 import SlideUp from "./SlideUp"
-import { BsGithub, BsArrowUpRightSquare } from "react-icons/bs"
+import { Icon } from "@iconify/react"
 
 const projects = [
   {
@@ -62,15 +63,19 @@ const ProjectsSection = () => {
                     </p>
                     <div className="flex flex-row align-bottom space-x-4">
                       <Link href={project.github} target="_blank">
-                        <BsGithub
-                          size={30}
+                        <Icon
                           className="hover:-translate-y-1 transition-transform cursor-pointer"
+                          icon="bi:github"
+                          width="30"
+                          height="30"
                         />
                       </Link>
                       <Link href={project.link} target="_blank">
-                        <BsArrowUpRightSquare
-                          size={30}
+                        <Icon
                           className="hover:-translate-y-1 transition-transform cursor-pointer"
+                          icon="bi:box-arrow-up-right"
+                          width="30"
+                          height="30"
                         />
                       </Link>
                     </div>

@@ -1,4 +1,5 @@
-import { AiOutlineGithub, AiOutlineLinkedin } from "react-icons/ai"
+"use client"
+import { Icon } from "@iconify/react"
 
 const Footer = () => {
   return (
@@ -13,9 +14,11 @@ const Footer = () => {
             href="https://github.com/DarrickFauvel"
             rel="noreferrer"
             target="_blank">
-            <AiOutlineGithub
+            <Icon
               className="hover:-translate-y-1 transition-transform cursor-pointer text-neutral-500 dark:text-neutral-100"
-              size={30}
+              icon="bi:github"
+              width="30"
+              height="30"
             />
           </a>
 
@@ -23,9 +26,11 @@ const Footer = () => {
             href="https://www.linkedin.com/in/DarrickFauvel"
             rel="noreferrer"
             target="_blank">
-            <AiOutlineLinkedin
+            <Icon
               className="hover:-translate-y-1 transition-transform cursor-pointer text-neutral-500 dark:text-neutral-100"
-              size={30}
+              icon="bi:linkedin"
+              width="30"
+              height="30"
             />
           </a>
         </div>

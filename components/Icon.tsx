@@ -1,3 +1,4 @@
+"use client"
 import { Icon as IconifyIcon } from "@iconify/react"
 
 type IconProps = {
@@ -17,6 +18,15 @@ const Icon = ({ icon, color = "black" }: IconProps) => {
     case "box-arrow":
       iconToken = "bi:box-arrow-up-right"
       break
+    case "chevron-bounce":
+      iconToken = "bi:chevron-double-down"
+      break
+    case "close":
+      iconToken = "ri:close-fill"
+      break
+    case "menu":
+      iconToken = "ri:menu-fill"
+      break
 
     default:
       break
@@ -24,10 +34,13 @@ const Icon = ({ icon, color = "black" }: IconProps) => {
 
   const baseClassNames =
     "hover:-translate-y-1 transition-transform cursor-pointer"
+  const animationClasses = "animate-bounce"
 
   return (
     <IconifyIcon
-      className={`${baseClassNames}`}
+      className={`${baseClassNames} ${
+        icon === "chevron-bounce" && animationClasses
+      }`}
       icon={iconToken}
       width="30"
       height="30"

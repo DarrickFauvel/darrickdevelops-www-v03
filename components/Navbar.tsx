@@ -1,8 +1,9 @@
 "use client"
 import { useState } from "react"
 import { useTheme } from "next-themes"
-import { Icon } from "@iconify/react"
+// import { Icon } from "@iconify/react"
 import { Link as LinkScroll } from "react-scroll"
+import Icon from "./Icon"
 
 interface NavItem {
   label: string
@@ -35,16 +36,24 @@ const Navbar = () => {
         <div>
           <div className="flex items-center justify-between py-3">
             <div className="md:py-5 md:block">
-              <a className="cursor-pointer" href="#home">
-                <h2 className="text-2xl font-bold">Darrick Develops</h2>
-              </a>
+              <LinkScroll
+                className={"active cursor-pointer text-2xl font-bold"}
+                to="home"
+                spy={true}
+                smooth={true}
+                offset={-100}
+                duration={500}>
+                Darrick Develops
+              </LinkScroll>
             </div>
             <div className="md:hidden">
               <button onClick={() => setNavbar(!navbar)}>
                 {navbar ? (
-                  <Icon icon="ri:close-line" width="30" height="30" />
+                  // <Icon icon="ri:close-line" width="30" height="30" />
+                  <Icon icon="close" />
                 ) : (
-                  <Icon icon="ri:menu-fill" width="30" height="30" />
+                  // <Icon icon="ri:menu-fill" width="30" height="30" />
+                  <Icon icon="menu" />
                 )}
               </button>
             </div>
@@ -60,15 +69,15 @@ const Navbar = () => {
               {NAV_ITEMS.map((item, idx) => {
                 return (
                   <LinkScroll
+                    className={
+                      "cursor-pointer block lg:inline-block text-stone-900 hover:text-stone-500 dark:text-stone-100"
+                    }
                     key={idx}
                     to={item.page}
-                    className={
-                      "cursor-pointer block lg:inline-block text-neutral-900 hover:text-neutral-500 dark:text-neutral-100"
-                    }
                     activeClass="active"
                     spy={true}
                     smooth={true}
-                    offset={-100}
+                    offset={-90}
                     duration={500}
                     onClick={() => setNavbar(!navbar)}>
                     {item.label}

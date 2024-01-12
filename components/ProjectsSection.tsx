@@ -66,12 +66,14 @@ const ProjectsSection = () => {
                       </p>
                       <div className="flex flex-row align-bottom space-x-4">
                         <Link
+                          className="hover:-translate-y-1 transition-transform cursor-pointer"
                           href={project.github}
                           target="_blank"
                           title="to GitHub repo">
                           <Icon icon="github" />
                         </Link>
                         <Link
+                          className="hover:-translate-y-1 transition-transform cursor-pointer"
                           href={project.link}
                           target="_blank"
                           title="to live demo">

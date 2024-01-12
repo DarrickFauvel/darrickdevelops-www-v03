@@ -27,6 +27,12 @@ const Icon = ({ icon, color = "black" }: IconProps) => {
     case "menu":
       iconToken = "ri:menu-fill"
       break
+    case "light":
+      iconToken = "ri:sun-line"
+      break
+    case "dark":
+      iconToken = "ri:moon-fill"
+      break
 
     default:
       break
@@ -38,9 +44,7 @@ const Icon = ({ icon, color = "black" }: IconProps) => {
 
   return (
     <IconifyIcon
-      className={`${baseClassNames} ${
-        icon === "chevron-bounce" && animationClasses
-      }`}
+      className={`${icon === "chevron-bounce" && animationClasses}`}
       icon={iconToken}
       width="30"
       height="30"

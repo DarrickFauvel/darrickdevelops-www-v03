@@ -12,12 +12,14 @@ const Footer = () => {
           </div>
           <div className="flex flex-row items-center justify-center space-x-2 mb-1">
             <a
+              className="hover:-translate-y-1 transition-transform cursor-pointer"
               href="https://github.com/DarrickFauvel"
               rel="noreferrer"
               target="_blank">
               <Icon icon="github" color="neutral" />
             </a>
             <a
+              className="hover:-translate-y-1 transition-transform cursor-pointer"
               href="https://www.linkedin.com/in/DarrickFauvel"
               rel="noreferrer"
               target="_blank">

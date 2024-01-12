@@ -54,7 +54,7 @@ const HeroSection = () => {
               smooth={true}
               offset={-100}
               duration={500}>
-              <Icon icon="chevron-bounce" />
+              {/* <Icon icon="chevron-bounce" /> */}
             </LinkScroll>
           </span>
         </div>

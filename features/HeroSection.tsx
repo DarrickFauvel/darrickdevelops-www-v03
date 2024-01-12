@@ -56,7 +56,7 @@ const HeroSection = () => {
             duration={500}
             // title="About"
           >
-            <Icon icon="chevron-bounce" />
+            {/* <Icon icon="chevron-bounce" /> */}
           </LinkScroll>
         </div>
       </Container>

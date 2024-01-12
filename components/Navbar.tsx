@@ -1,15 +1,15 @@
 "use client"
 import { useState } from "react"
 import { useTheme } from "next-themes"
-import { Icon } from "@iconify/react"
 import { Link as LinkScroll } from "react-scroll"
+import Icon from "./Icon"
 
 interface NavItem {
   label: string
   page: string
 }
 
-const NAV_ITEMS: Array<NavItem> = [
+const navItems: NavItem[] = [
   {
     label: "Home",
     page: "home",
@@ -35,17 +35,19 @@ const Navbar = () => {
         <div>
           <div className="flex items-center justify-between py-3">
             <div className="md:py-5 md:block">
-              <a className="cursor-pointer" href="#home">
-                <h2 className="text-2xl font-bold">Darrick Develops</h2>
-              </a>
+              <LinkScroll
+                className={"active cursor-pointer text-2xl font-bold"}
+                to="home"
+                spy={true}
+                smooth={true}
+                offset={-100}
+                duration={500}>
+                Darrick Develops
+              </LinkScroll>
             </div>
             <div className="md:hidden">
               <button onClick={() => setNavbar(!navbar)}>
-                {navbar ? (
-                  <Icon icon="ri:close-line" width="30" height="30" />
-                ) : (
-                  <Icon icon="ri:menu-fill" width="30" height="30" />
-                )}
+                <Icon icon={navbar ? "close" : "menu"} />
               </button>
             </div>
           </div>
@@ -57,18 +59,18 @@ const Navbar = () => {
               navbar ? "block" : "hidden"
             }`}>
             <div className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
-              {NAV_ITEMS.map((item, idx) => {
+              {navItems.map((item, idx) => {
                 return (
                   <LinkScroll
+                    className={
+                      "cursor-pointer block lg:inline-block text-stone-900 hover:text-stone-500 dark:text-stone-100"
+                    }
                     key={idx}
                     to={item.page}
-                    className={
-                      "cursor-pointer block lg:inline-block text-neutral-900 hover:text-neutral-500 dark:text-neutral-100"
-                    }
                     activeClass="active"
                     spy={true}
                     smooth={true}
-                    offset={-100}
+                    offset={-90}
                     duration={500}
                     onClick={() => setNavbar(!navbar)}>
                     {item.label}
@@ -77,20 +79,15 @@ const Navbar = () => {
               })}
               {currentTheme === "dark" ? (
                 <button
-                  className="bg-slate-100 p-2 rounded-xl"
+                  className="bg-stone-100 text-stone-950 hover:scale-95 p-2 rounded-xl"
                   onClick={() => setTheme("light")}>
-                  <Icon
-                    className="dark:text-black"
-                    icon="ri:sun-line"
-                    width={25}
-                    height={25}
-                  />
+                  <Icon icon="light" />
                 </button>
               ) : (
                 <button
-                  className="bg-slate-100 p-2 rounded-xl"
+                  className="bg-stone-100 hover:scale-95 p-2 rounded-xl"
                   onClick={() => setTheme("dark")}>
-                  <Icon icon="ri:moon-fill" width={25} height={25} />
+                  <Icon icon="dark" />
                 </button>
               )}
             </div>

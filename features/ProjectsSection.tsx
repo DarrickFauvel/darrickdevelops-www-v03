@@ -70,14 +70,16 @@ const ProjectsSection = () => {
                           href={project.github}
                           target="_blank"
                           title="to GitHub repo">
-                          <Icon icon="github" />
+                          {/* <Icon icon="github" /> */}
+                          GITHUB HERE
                         </Link>
                         <Link
                           className="hover:-translate-y-1 transition-transform cursor-pointer"
                           href={project.link}
                           target="_blank"
                           title="to live demo">
-                          <Icon icon="box-arrow" />
+                          {/* <Icon icon="box-arrow" /> */}
+                          DEMO HERE
                         </Link>
                       </div>
                     </div>

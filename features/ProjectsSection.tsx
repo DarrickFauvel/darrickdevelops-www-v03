@@ -1,8 +1,8 @@
 import Image from "next/image"
 import Link from "next/link"
-import SlideUp from "./SlideUp"
-import Icon from "./Icon"
-import Container from "./Container"
+import SlideUp from "../components/SlideUp"
+import Icon from "../components/Icon"
+import Container from "../components/Container"
 
 const projects = [
   {

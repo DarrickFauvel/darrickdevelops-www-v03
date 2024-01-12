@@ -1,8 +1,8 @@
 "use client"
 import Image from "next/image"
 import { Link as LinkScroll } from "react-scroll"
-import Container from "./Container"
-import Icon from "./Icon"
+import Container from "../components/Container"
+import Icon from "../components/Icon"
 
 const HeroSection = () => {
   return (

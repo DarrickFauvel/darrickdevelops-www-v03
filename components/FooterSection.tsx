@@ -16,14 +16,14 @@ const Footer = () => {
               href="https://github.com/DarrickFauvel"
               rel="noreferrer"
               target="_blank">
-              <Icon icon="github" color="neutral" />
+              <Icon icon="github" />
             </a>
             <a
               className="hover:-translate-y-1 transition-transform cursor-pointer"
               href="https://www.linkedin.com/in/DarrickFauvel"
               rel="noreferrer"
               target="_blank">
-              <Icon icon="linkedin" color="neutral" />
+              <Icon icon="linkedin" />
             </a>
           </div>
         </div>

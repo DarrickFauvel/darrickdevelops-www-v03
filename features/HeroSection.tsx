@@ -1,8 +1,8 @@
 "use client"
 import Image from "next/image"
 import { Link as LinkScroll } from "react-scroll"
-import Container from "./Container"
-import Icon from "./Icon"
+import Container from "../components/Container"
+import Icon from "../components/Icon"
 
 const HeroSection = () => {
   return (
@@ -48,14 +48,15 @@ const HeroSection = () => {
 
         <div className="flex flex-row justify-center">
           <LinkScroll
-            className="animate-bounce cursor-pointer"
+            // className="animate-bounce cursor-pointer"
             to="about"
             spy={true}
             smooth={true}
             offset={-100}
             duration={500}
-            title="About">
-            <Icon icon="chevron-bounce" />
+            // title="About"
+          >
+            {/* <Icon icon="chevron-bounce" /> */}
           </LinkScroll>
         </div>
       </Container>

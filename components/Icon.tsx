@@ -38,17 +38,6 @@ const Icon = ({ icon, color = "black" }: IconProps) => {
       break
   }
 
-  const baseClassNames =
-    "hover:-translate-y-1 transition-transform cursor-pointer"
-  const animationClasses = "animate-bounce"
-
-  return (
-    <IconifyIcon
-      className={`${icon === "chevron-bounce" && animationClasses}`}
-      icon={iconToken}
-      width="30"
-      height="30"
-    />
-  )
+  return <IconifyIcon icon={iconToken} width="30" height="30" />
 }
 export default Icon

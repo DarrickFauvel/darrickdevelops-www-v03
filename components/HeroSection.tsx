@@ -48,6 +48,7 @@ const HeroSection = () => {
 
         <div className="flex flex-row justify-center">
           <LinkScroll
+            className="animate-bounce cursor-pointer"
             to="about"
             spy={true}
             smooth={true}

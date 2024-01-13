@@ -24,6 +24,7 @@
     "typescript": "4.9.4"
   },
   "devDependencies": {
+    "@iconify/icons-bi": "^1.2.19",
     "@iconify/react": "^4.1.1",
     "@types/react-scroll": "^1.8.6",
     "autoprefixer": "^10.4.16",

@@ -3,7 +3,8 @@ import Image from "next/image"
 import { Link as LinkScroll } from "react-scroll"
 import Container from "../components/Container"
 // import Icon from "../components/Icon"
-import { Icon } from "@iconify/react"
+// import { Icon } from "@iconify/react"
+// import chevronDoubleDown from "@iconify/icons-bi/chevron-double-down"
 
 const HeroSection = () => {
   return (
@@ -55,8 +56,8 @@ const HeroSection = () => {
               smooth={true}
               offset={-100}
               duration={500}>
-              <Icon icon="bi:chevron-double-down" width="30" height="30" />
-              {/* CHEVRON HERE */}
+              {/* <Icon icon={chevronDoubleDown} width="30" height="30" /> */}
+              CHEVRON HERE
             </LinkScroll>
           </span>
         </div>

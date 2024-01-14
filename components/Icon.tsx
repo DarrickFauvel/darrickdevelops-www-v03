@@ -17,9 +17,6 @@ const Icon = ({ icon }: IconProps) => {
     case "box-arrow":
       iconToken = "bi:box-arrow-up-right"
       break
-    case "chevron-bounce":
-      iconToken = "bi:chevron-double-down"
-      break
     case "close":
       iconToken = "ri:close-fill"
       break

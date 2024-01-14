@@ -1,8 +1,8 @@
 import Image from "next/image"
 import Link from "next/link"
 import SlideUp from "../components/SlideUp"
-import Icon from "../components/Icon"
 import Container from "../components/Container"
+import Icon from "@/components/Icon"
 
 const projects = [
   {
@@ -70,16 +70,14 @@ const ProjectsSection = () => {
                           href={project.github}
                           target="_blank"
                           title="to GitHub repo">
-                          {/* <Icon icon="github" /> */}
-                          GITHUB HERE
+                          <Icon icon="github" />
                         </Link>
                         <Link
                           className="hover:-translate-y-1 transition-transform cursor-pointer"
                           href={project.link}
                           target="_blank"
                           title="to live demo">
-                          {/* <Icon icon="box-arrow" /> */}
-                          DEMO HERE
+                          <Icon icon="box-arrow" />
                         </Link>
                       </div>
                     </div>

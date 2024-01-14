@@ -2,15 +2,15 @@
 import Image from "next/image"
 import { Link as LinkScroll } from "react-scroll"
 import Container from "../components/Container"
-// import Icon from "../components/Icon"
-// import { Icon } from "@iconify/react"
-// import chevronDoubleDown from "@iconify/icons-bi/chevron-double-down"
+import chevronIcon from "../assets/chevron-double-down.svg"
+import Link from "next/link"
+import { Icon } from "@iconify/react"
 
 const HeroSection = () => {
   return (
     <section
       id="home"
-      className="pt-8 pb-52 md:h-[calc(100vh-96px)] md:mb-[96px] md:flex outline outline-1 outline-red-500">
+      className="pt-8 pb-52 md:h-[calc(100vh-96px)] md:mb-[96px] md:flex">
       <Container>
         <div className="flex flex-col items-center text-center pt-16 pb-32 md:flex-row md:space-x-4 md:text-left md:py-52">
           <div className="md:w-1/2 md:mt-2">
@@ -51,14 +51,9 @@ const HeroSection = () => {
 
         <div className="flex flex-row justify-center">
           <span className="animate-bounce cursor-pointer">
-            <LinkScroll
-              to="about"
-              spy={true}
-              smooth={true}
-              offset={-100}
-              duration={500}>
-              CHEVRON HERE
-            </LinkScroll>
+            <a href="#about">
+              <Icon icon="bi:chevron-double-down" width="30" height="30" />
+            </a>
           </span>
         </div>
       </Container>

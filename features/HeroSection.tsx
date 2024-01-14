@@ -6,6 +6,8 @@ import Container from "../components/Container"
 // import { Icon } from "@iconify/react"
 // import chevronDoubleDown from "@iconify/icons-bi/chevron-double-down"
 import chevronIcon from "../assets/chevron-double-down.svg"
+import Link from "next/link"
+import { Icon } from "@iconify/react"
 
 const HeroSection = () => {
   return (
@@ -52,23 +54,9 @@ const HeroSection = () => {
 
         <div className="flex flex-row justify-center">
           <span className="animate-bounce cursor-pointer">
-            <LinkScroll
-              to="about"
-              spy={true}
-              smooth={true}
-              offset={-100}
-              duration={500}>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="30"
-                height="30"
-                viewBox="0 0 16 16">
-                <g fill="currentColor" fill-rule="evenodd">
-                  <path d="M1.646 6.646a.5.5 0 0 1 .708 0L8 12.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
-                  <path d="M1.646 2.646a.5.5 0 0 1 .708 0L8 8.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
-                </g>
-              </svg>
-            </LinkScroll>
+            <a href="#about">
+              <Icon icon="bi:chevron-double-down" width="30" height="30" />
+            </a>
           </span>
         </div>
       </Container>

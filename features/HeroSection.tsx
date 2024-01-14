@@ -10,7 +10,7 @@ const HeroSection = () => {
   return (
     <section
       id="home"
-      className="pt-8 pb-52 md:h-[calc(100vh-96px)] md:mb-[96px] md:flex">
+      className="pt-8 pb-52 md:h-[calc(100vh-96px)] md:mb-[96px] md:flex outline outline-1 outline-red-500">
       <Container>
         <div className="flex flex-col items-center text-center pt-16 pb-32 md:flex-row md:space-x-4 md:text-left md:py-52">
           <div className="md:w-1/2 md:mt-2">
@@ -20,6 +20,7 @@ const HeroSection = () => {
               alt=""
               width={300}
               height={300}
+              priority
             />
           </div>
           <div className="md:mt-2 md:w-3/5">
@@ -56,7 +57,6 @@ const HeroSection = () => {
               smooth={true}
               offset={-100}
               duration={500}>
-              {/* <Icon icon={chevronDoubleDown} width="30" height="30" /> */}
               CHEVRON HERE
             </LinkScroll>
           </span>

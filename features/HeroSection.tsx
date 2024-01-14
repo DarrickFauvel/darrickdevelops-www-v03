@@ -5,6 +5,7 @@ import Container from "../components/Container"
 // import Icon from "../components/Icon"
 // import { Icon } from "@iconify/react"
 // import chevronDoubleDown from "@iconify/icons-bi/chevron-double-down"
+import chevronIcon from "../assets/chevron-double-down.svg"
 
 const HeroSection = () => {
   return (
@@ -57,7 +58,12 @@ const HeroSection = () => {
               smooth={true}
               offset={-100}
               duration={500}>
-              CHEVRON HERE
+              <Image
+                src={chevronIcon}
+                alt="chevron icon"
+                height={30}
+                width={30}
+              />
             </LinkScroll>
           </span>
         </div>

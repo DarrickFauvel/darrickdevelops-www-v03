@@ -10,7 +10,7 @@ const HeroSection = () => {
   return (
     <section
       id="home"
-      className="pt-8 pb-52 md:h-[calc(100vh-96px)] md:mb-[96px] md:flex outline outline-1 outline-red-500">
+      className="pt-8 pb-52 md:h-[calc(100vh-96px)] md:mb-[96px] md:flex">
       <Container>
         <div className="flex flex-col items-center text-center pt-16 pb-32 md:flex-row md:space-x-4 md:text-left md:py-52">
           <div className="md:w-1/2 md:mt-2">

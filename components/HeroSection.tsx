@@ -1,7 +1,7 @@
 "use client"
 import Image from "next/image"
 import { Link as LinkScroll } from "react-scroll"
-import Container from "../components/Container"
+import Container from "./Container"
 import chevronIcon from "../assets/chevron-double-down.svg"
 import Link from "next/link"
 import { Icon } from "@iconify/react"

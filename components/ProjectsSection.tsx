@@ -1,7 +1,7 @@
 import Image from "next/image"
 import Link from "next/link"
-import SlideUp from "../components/SlideUp"
-import Container from "../components/Container"
+import SlideUp from "./SlideUp"
+import Container from "./Container"
 import Icon from "@/components/Icon"
 
 const projects = [

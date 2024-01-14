@@ -3,10 +3,9 @@ import { Icon as IconifyIcon } from "@iconify/react"
 
 type IconProps = {
   icon: string
-  color?: string
 }
 
-const Icon = ({ icon, color = "black" }: IconProps) => {
+const Icon = ({ icon }: IconProps) => {
   let iconToken = ""
   switch (icon) {
     case "github":

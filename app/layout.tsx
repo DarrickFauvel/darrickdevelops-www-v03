@@ -1,7 +1,6 @@
-"use client"
 import "../styles/globals.css"
 import Navbar from "@/components/Navbar"
-import { ThemeProvider } from "next-themes"
+import { Providers } from "./providers"
 
 export default function RootLayout({
   children,
@@ -9,17 +8,17 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       {/*
         <head /> will contain the components returned by the nearest parent
         head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
       */}
       <head />
       <body className="text-stone-900 dark:text-slate-50 bg-slate-50 dark:bg-stone-900">
-        <ThemeProvider enableSystem={true} attribute="class">
+        <Providers>
           <Navbar />
           {children}
-        </ThemeProvider>
+        </Providers>
       </body>
     </html>
   )

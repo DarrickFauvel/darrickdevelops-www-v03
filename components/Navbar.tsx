@@ -3,6 +3,7 @@ import { useState } from "react"
 import { useTheme } from "next-themes"
 import { Link as LinkScroll } from "react-scroll"
 import Icon from "./Icon"
+import ThemeSwitch from "./ThemeSwitch"
 
 interface NavItem {
   label: string

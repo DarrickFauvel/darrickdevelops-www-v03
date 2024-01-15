@@ -58,7 +58,7 @@ const HeroSection = () => {
               offset={-100}
               duration={500}>
               {/* <Icon icon="bi:chevron-double-down" width="30" height="30" /> */}
-              CHEVRON HERE
+              <p>CHEVRON HERE</p>
             </LinkScroll>
           </span>
         </div>

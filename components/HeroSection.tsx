@@ -51,9 +51,15 @@ const HeroSection = () => {
 
         <div className="flex flex-row justify-center">
           <span className="animate-bounce cursor-pointer">
-            <a href="#about">
-              <Icon icon="bi:chevron-double-down" width="30" height="30" />
-            </a>
+            <LinkScroll
+              to="about"
+              spy={true}
+              smooth={true}
+              offset={-100}
+              duration={500}>
+              {/* <Icon icon="bi:chevron-double-down" width="30" height="30" /> */}
+              CHEVRON HERE
+            </LinkScroll>
           </span>
         </div>
       </Container>

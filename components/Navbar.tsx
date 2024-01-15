@@ -7,21 +7,21 @@ import ThemeSwitch from "./ThemeSwitch"
 
 interface NavItem {
   label: string
-  page: string
+  section: string
 }
 
 const navItems: NavItem[] = [
   {
     label: "Home",
-    page: "home",
+    section: "home",
   },
   {
     label: "About",
-    page: "about",
+    section: "about",
   },
   {
     label: "Projects",
-    page: "projects",
+    section: "projects",
   },
 ]
 
@@ -67,7 +67,7 @@ const Navbar = () => {
                       "cursor-pointer block lg:inline-block text-stone-900 hover:text-stone-500 dark:text-stone-100"
                     }
                     key={idx}
-                    to={item.page}
+                    to={item.section}
                     activeClass="active"
                     spy={true}
                     smooth={true}

@@ -1,7 +1,6 @@
 "use client"
 import { useState } from "react"
 import { useTheme } from "next-themes"
-import { Link as LinkScroll } from "react-scroll"
 import Icon from "./Icon"
 import ThemeSwitch from "./ThemeSwitch"
 
@@ -30,24 +29,24 @@ const Navbar = () => {
   const { systemTheme, theme, setTheme } = useTheme()
   const currentTheme = theme === "systems" ? systemTheme : theme
 
+  const toggleNavbar = () => setNavbar(!navbar)
+  const closeNavbar = () => setNavbar(false)
+
   return (
     <header className="w-full mx-auto px-4 bg-slate-50 shadow fixed top-0 z-50 sm:px-20 dark:bg-stone-900 dark:border-b dark:border-stone-600">
       <div className="justify-between md:items-center md:flex">
         <div>
           <div className="flex items-center justify-between py-3">
             <div className="md:py-5 md:block">
-              <LinkScroll
-                className={"active cursor-pointer text-2xl font-bold"}
-                to="home"
-                spy={true}
-                smooth={true}
-                offset={-100}
-                duration={500}>
+              <a
+                className="active cursor-pointer text-2xl font-bold"
+                href="#home"
+                onClick={closeNavbar}>
                 Darrick Develops
-              </LinkScroll>
+              </a>
             </div>
             <div className="md:hidden">
-              <button onClick={() => setNavbar(!navbar)}>
+              <button onClick={toggleNavbar}>
                 <Icon icon={navbar ? "close" : "menu"} />
               </button>
             </div>
@@ -62,20 +61,13 @@ const Navbar = () => {
             <div className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
               {navItems.map((item, idx) => {
                 return (
-                  <LinkScroll
-                    className={
-                      "cursor-pointer block lg:inline-block text-stone-900 hover:text-stone-500 dark:text-stone-100"
-                    }
+                  <a
+                    className="cursor-pointer block lg:inline-block text-stone-900 hover:text-stone-500 dark:text-stone-100"
+                    href={"#" + item.section}
                     key={idx}
-                    to={item.section}
-                    activeClass="active"
-                    spy={true}
-                    smooth={true}
-                    offset={-90}
-                    duration={500}
-                    onClick={() => setNavbar(!navbar)}>
-                    {item.label}
-                  </LinkScroll>
+                    onClick={toggleNavbar}>
+                    {item.section}
+                  </a>
                 )
               })}
               {currentTheme === "dark" ? (

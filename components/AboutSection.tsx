@@ -16,7 +16,7 @@ const skills = [
 
 const AboutSection = () => {
   return (
-    <section id="about" className="pb-24 md:h-screen md:pt-6">
+    <section id="about" className="pt-[5.5rem] pb-24 md:h-screen md:pt-6">
       <Container>
         <div
         // className="my-12 pb-12 md:pt-16 md:pb-48"

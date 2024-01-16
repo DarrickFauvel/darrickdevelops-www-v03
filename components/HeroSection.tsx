@@ -1,6 +1,7 @@
 "use client"
 import Image from "next/image"
 import { Link as LinkScroll } from "react-scroll"
+import ScrollElement from "react-scroll-element"
 import Container from "./Container"
 import chevronIcon from "../assets/chevron-double-down.svg"
 import Link from "next/link"
@@ -50,17 +51,22 @@ const HeroSection = () => {
         </div>
 
         <div className="flex flex-row justify-center">
-          <span className="animate-bounce cursor-pointer">
+          <div className="cursor-pointer">
             <LinkScroll
+              className="relative"
               to="about"
               spy={true}
               smooth={true}
               offset={-100}
               duration={500}>
-              {/* <Icon icon="bi:chevron-double-down" width="30" height="30" /> */}
-              <p>CHEVRON HERE</p>
+              <ScrollElement
+                type={"chevron-bouncing"}
+                text={"scroll"}
+                colorIcon={"#000"}
+                colorText={"#000"}
+              />
             </LinkScroll>
-          </span>
+          </div>
         </div>
       </Container>
     </section>

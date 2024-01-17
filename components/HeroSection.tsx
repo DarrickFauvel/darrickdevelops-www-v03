@@ -1,9 +1,7 @@
 "use client"
 import Image from "next/image"
-import { Link as LinkScroll } from "react-scroll"
 import Container from "./Container"
 import chevronIcon from "../assets/chevron-double-down.svg"
-import Link from "next/link"
 import { Icon } from "@iconify/react"
 
 const HeroSection = () => {
@@ -35,32 +33,22 @@ const HeroSection = () => {
               based in Lowell, MA. Working towards creating software that makes
               life easier and more meaningful.
             </p>
-            <LinkScroll
+            <a
               className={
                 "active cursor-pointer text-neutral-100 font-semibold px-6 py-3 bg-teal-600 rounded shadow hover:bg-teal-700"
               }
-              to="projects"
-              spy={true}
-              smooth={true}
-              offset={-100}
-              duration={500}>
+              href="#projects">
               Projects
-            </LinkScroll>
+            </a>
           </div>
         </div>
 
         <div className="flex flex-row justify-center">
-          <span className="animate-bounce cursor-pointer">
-            <LinkScroll
-              to="about"
-              spy={true}
-              smooth={true}
-              offset={-100}
-              duration={500}>
-              {/* <Icon icon="bi:chevron-double-down" width="30" height="30" /> */}
-              CHEVRON HERE
-            </LinkScroll>
-          </span>
+          <div className="cursor-pointer animate-bounce">
+            <a href="#about">
+              <Icon icon="bi:chevron-double-down" width="30" height="30" />
+            </a>
+          </div>
         </div>
       </Container>
     </section>

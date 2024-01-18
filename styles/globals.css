@@ -2,10 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
-  scroll-behavior: smooth;
-}
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
 
-.active {
-  font-weight: 500;
+  .active {
+    font-weight: 500;
+  }
+
+  .scroll-padding-top {
+    padding-top: 5.5rem;
+  }
 }

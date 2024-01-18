@@ -33,7 +33,7 @@ const projects = [
 
 const ProjectsSection = () => {
   return (
-    <section id="projects" className="pt-[5.5rem] mb-24 md:pt-6">
+    <section id="projects" className="scroll-padding-top mb-24 md:pt-6">
       <Container>
         <h2 className="text-center font-bold text-4xl">
           {/* <h1 className="my-10 text-center font-bold text-4xl"> */}

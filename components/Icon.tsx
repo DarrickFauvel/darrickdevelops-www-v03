@@ -29,6 +29,9 @@ const Icon = ({ icon }: IconProps) => {
     case "dark":
       iconToken = "ri:moon-fill"
       break
+    case "chevron":
+      iconToken = "bi:chevron-double-down"
+      break
 
     default:
       break

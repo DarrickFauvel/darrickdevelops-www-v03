@@ -1,8 +1,8 @@
 "use client"
 import { useState } from "react"
 import { useTheme } from "next-themes"
-import Icon from "./Icon"
-import ThemeSwitch from "./ThemeSwitch"
+import Icon from "@/components/Icon"
+import ThemeSwitch from "@/components/ThemeSwitch"
 
 interface NavItem {
   label: string
@@ -24,7 +24,7 @@ const navItems: NavItem[] = [
   },
 ]
 
-const Navbar = () => {
+export function Navbar() {
   const [navbar, setNavbar] = useState(false)
   const { systemTheme, theme, setTheme } = useTheme()
   const currentTheme = theme === "systems" ? systemTheme : theme
@@ -90,4 +90,3 @@ const Navbar = () => {
     </header>
   )
 }
-export default Navbar

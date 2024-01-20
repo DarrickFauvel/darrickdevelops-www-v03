@@ -1,10 +1,8 @@
-"use client"
 import Image from "next/image"
-import Container from "./Container"
-import chevronIcon from "../assets/chevron-double-down.svg"
-import { Icon } from "@iconify/react"
+import Container from "@/components/Container"
+import Icon from "@/components/Icon"
 
-const HeroSection = () => {
+export function HeroSection() {
   return (
     <section
       id="home"
@@ -16,8 +14,8 @@ const HeroSection = () => {
               className="rounded-full shadow-2xl"
               src="/headshot.jpg"
               alt=""
-              width={300}
-              height={300}
+              width={200}
+              height={200}
               priority
             />
           </div>
@@ -46,7 +44,7 @@ const HeroSection = () => {
         <div className="flex flex-row justify-center">
           <div className="cursor-pointer animate-bounce">
             <a href="#about">
-              <Icon icon="bi:chevron-double-down" width="30" height="30" />
+              <Icon icon="chevron" />
             </a>
           </div>
         </div>
@@ -54,4 +52,3 @@ const HeroSection = () => {
     </section>
   )
 }
-export default HeroSection

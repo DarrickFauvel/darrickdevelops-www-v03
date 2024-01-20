@@ -1,9 +1,9 @@
 import Image from "next/image"
 import Link from "next/link"
-import SlideUp from "./SlideUp"
-import Container from "./Container"
+import SlideUp from "@/components/SlideUp"
+import Container from "@/components/Container"
 import Icon from "@/components/Icon"
-import ScrollOffset from "./ScrollOffset"
+import ScrollOffset from "@/components/ScrollOffset"
 
 const projects = [
   {
@@ -32,7 +32,7 @@ const projects = [
   },
 ]
 
-const ProjectsSection = () => {
+export function ProjectsSection() {
   return (
     <section id="projects" className="mb-24">
       <ScrollOffset>
@@ -94,5 +94,3 @@ const ProjectsSection = () => {
     </section>
   )
 }
-
-export default ProjectsSection

@@ -1,7 +1,7 @@
-import Container from "./Container"
-import Icon from "./Icon"
+import Container from "@/components/Container"
+import Icon from "@/components/Icon"
 
-const Footer = () => {
+export function FooterSection() {
   return (
     <footer className="max-w-3xl md:max-w-5xl text-stone-600 dark:text-stone-600">
       <Container>
@@ -31,5 +31,3 @@ const Footer = () => {
     </footer>
   )
 }
-
-export default Footer

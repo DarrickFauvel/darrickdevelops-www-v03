@@ -1,6 +1,6 @@
 import Image from "next/image"
-import Container from "./Container"
-import ScrollOffset from "./ScrollOffset"
+import Container from "@/components/Container"
+import ScrollOffset from "@/components/ScrollOffset"
 
 const skills = [
   { skill: "HTML" },
@@ -15,7 +15,7 @@ const skills = [
   { skill: "Agile Workflow" },
 ]
 
-const AboutSection = () => {
+export function AboutSection() {
   return (
     <section id="about" className="pb-24 md:h-screen">
       <ScrollOffset>
@@ -92,5 +92,3 @@ const AboutSection = () => {
     </section>
   )
 }
-
-export default AboutSection

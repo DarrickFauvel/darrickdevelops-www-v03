@@ -1,5 +1,5 @@
+import { Navbar } from "@/features/navbar/components/Navbar"
 import "../styles/globals.css"
-import Navbar from "@/components/Navbar"
 import { Providers } from "./providers"
 
 export default function RootLayout({

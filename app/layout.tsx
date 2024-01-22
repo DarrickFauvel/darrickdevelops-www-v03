@@ -1,4 +1,5 @@
-import { Navbar } from "@/features/navbar/components/Navbar"
+"use client"
+import { Navbar } from "@/components/Navbar"
 import "../styles/globals.css"
 import { Providers } from "./providers"
 

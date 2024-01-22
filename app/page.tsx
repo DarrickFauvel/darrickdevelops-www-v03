@@ -1,8 +1,8 @@
+import { AboutSection } from "@/components/AboutSection"
+import { FooterSection } from "@/components/FooterSection"
+import { HeroSection } from "@/components/HeroSection"
+import { ProjectsSection } from "@/components/ProjectsSection"
 import { ScrollToTop } from "@/components/ScrollToTop"
-import { AboutSection } from "@/features/about"
-import { FooterSection } from "@/features/footer"
-import { HeroSection } from "@/features/hero"
-import { ProjectsSection } from "@/features/projects"
 
 export default function Home() {
   return (

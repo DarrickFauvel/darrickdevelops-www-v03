@@ -2,7 +2,7 @@ import Container from "@/components/Container"
 import Icon from "@/components/Icon"
 import ScrollOffset from "@/components/ScrollOffset"
 
-export function FooterSection() {
+function FooterSection() {
   return (
     <footer className="max-w-3xl md:max-w-5xl text-stone-600 dark:text-stone-600">
       <ScrollOffset>
@@ -35,3 +35,5 @@ export function FooterSection() {
     </footer>
   )
 }
+
+export default FooterSection

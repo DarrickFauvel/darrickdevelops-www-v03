@@ -3,7 +3,7 @@ import { useState, useEffect } from "react"
 import { useTheme } from "next-themes"
 import Image from "next/image"
 
-export default function ThemeSwitch() {
+function ThemeSwitch() {
   const [mounted, setMounted] = useState(false)
   const { setTheme, resolvedTheme } = useTheme()
 
@@ -30,3 +30,5 @@ export default function ThemeSwitch() {
     return <FiMoon onClick={() => setTheme("dark")} />
   }
 }
+
+export default ThemeSwitch

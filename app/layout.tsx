@@ -1,7 +1,7 @@
 "use client"
-import { Navbar } from "@/components/Navbar"
+import Navbar from "@/components/Navbar"
 import "../styles/globals.css"
-import { Providers } from "./providers"
+import Providers from "./providers"
 
 export default function RootLayout({
   children,

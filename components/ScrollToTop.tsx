@@ -1,7 +1,7 @@
 "use client"
 import { useState, useEffect } from "react"
 
-export function ScrollToTop() {
+function ScrollToTop() {
   const [isVisible, setIsVisible] = useState(false)
 
   useEffect(() => {
@@ -38,3 +38,5 @@ export function ScrollToTop() {
     </button>
   )
 }
+
+export default ScrollToTop

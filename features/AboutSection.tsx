@@ -15,7 +15,7 @@ const skills = [
   { skill: "Agile Workflow" },
 ]
 
-export function AboutSection() {
+function AboutSection() {
   return (
     <section id="about" className="pb-24 md:h-screen">
       <ScrollOffset>
@@ -92,3 +92,5 @@ export function AboutSection() {
     </section>
   )
 }
+
+export default AboutSection

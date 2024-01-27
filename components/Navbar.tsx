@@ -24,7 +24,7 @@ const navItems: NavItem[] = [
   },
 ]
 
-export function Navbar() {
+function Navbar() {
   const [navbar, setNavbar] = useState(false)
   const { systemTheme, theme, setTheme } = useTheme()
   const currentTheme = theme === "systems" ? systemTheme : theme
@@ -90,3 +90,5 @@ export function Navbar() {
     </header>
   )
 }
+
+export default Navbar

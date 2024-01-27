@@ -2,7 +2,7 @@ import Image from "next/image"
 import Container from "@/components/Container"
 import Icon from "@/components/Icon"
 
-export function HeroSection() {
+function HeroSection() {
   return (
     <section
       id="home"
@@ -52,3 +52,5 @@ export function HeroSection() {
     </section>
   )
 }
+
+export default HeroSection

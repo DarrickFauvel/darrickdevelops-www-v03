@@ -32,7 +32,7 @@ const projects = [
   },
 ]
 
-export function ProjectsSection() {
+function ProjectsSection() {
   return (
     <section id="projects" className="mb-24">
       <ScrollOffset>
@@ -94,3 +94,5 @@ export function ProjectsSection() {
     </section>
   )
 }
+
+export default ProjectsSection
